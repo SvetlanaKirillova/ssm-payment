@@ -6,9 +6,11 @@ import kz.fotya.ssmpayment.services.PaymentServiceImpl;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.statemachine.StateContext;
 import org.springframework.statemachine.action.Action;
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
+@Component
 public class AuthAction implements Action<PaymentState, PaymentEvent> {
     @Override
     public void execute(StateContext<PaymentState, PaymentEvent> context) {
